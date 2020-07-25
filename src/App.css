@@ -1,0 +1,6 @@
+i.icon{
+    transition: background .2s ease-out;
+}
+i.icon:active{
+    background-color: #4d4d4d;
+}

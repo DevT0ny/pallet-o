@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Pallets() {
-    return (
-        <div>
-            <p>pALLLED</p>
-        </div>
-    )
+export default class Pallets extends Component {
+    render() {
+        return (
+            <div>
+                pallets
+            </div>
+        )
+    }
 }
