@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Muli', 'Nunito' ;
+  font-family: 'Muli','Poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17868,6 +17868,97 @@ video {
 
 .delay-1000 {
   transition-delay: 1000ms;
+}
+
+input[data-error]{
+  --border-opacity: 1;
+  border-color: #c53030;
+  border-color: rgba(197, 48, 48, var(--border-opacity));
+}
+
+input[data-error]:hover{
+  --border-opacity: 1;
+  border-color: #c53030;
+  border-color: rgba(197, 48, 48, var(--border-opacity));
+}
+
+.slidebar{
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.slidebar__logo{
+  font-size: 1.5rem;
+  --text-opacity: 1;
+  color: #4299e1;
+  color: rgba(66, 153, 225, var(--text-opacity));
+  font-weight: 700;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.slidebar__link{
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.slidebar__link:hover{
+  --text-opacity: 1;
+  color: #3182ce;
+  color: rgba(49, 130, 206, var(--text-opacity));
+}
+
+.slidebar__link--active{
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #4299e1;
+  background-color: rgba(66, 153, 225, var(--bg-opacity));
+  font-weight: 700;
+}
+
+.slidebar__link--active:hover{
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+@-webkit-keyframes showPopup {
+  from{
+    transform: translateY(-6vh);
+  }
+
+  to {
+    transform: translateY(3vh);
+  }
+}
+
+@keyframes showPopup {
+  from{
+    transform: translateY(-6vh);
+  }
+
+  to {
+    transform: translateY(3vh);
+  }
+}
+
+#popup{
+  /* transition: transform 5s; */
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  transform: translateY(-6vh);
 }
 
 @media (min-width: 640px) {

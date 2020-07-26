@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Muli','Poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +9,46 @@ body {
 @tailwind components;
 
 @tailwind utilities;
+
+input[data-error]{
+  @apply border-red-700 ;
+}
+input[data-error]:hover{
+  @apply border-red-700 ;
+}
+
+.slidebar{
+  @apply bg-white ;
+}
+
+.slidebar__logo{
+  @apply text-2xl text-blue-500 font-bold  text-center py-4;
+}
+.slidebar__link{
+  @apply text-gray-700 w-full py-2 px-10 inline-block font-semibold;
+}
+
+.slidebar__link:hover{
+  @apply text-blue-600;
+}
+.slidebar__link--active{
+  @apply text-white bg-blue-500 font-bold;
+}
+.slidebar__link--active:hover{
+  @apply text-white;
+}
+@keyframes showPopup {
+  from{
+    transform: translateY(-6vh);
+  }
+  to {
+    transform: translateY(3vh);
+  }
+}
+
+#popup{
+  /* transition: transform 5s; */
+  animation-duration: .6s;
+  transform: translateY(-6vh);
+
+}
