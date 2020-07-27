@@ -17904,10 +17904,9 @@ input[data-error]:hover{
   color: #4a5568;
   color: rgba(74, 85, 104, var(--text-opacity));
   width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
   display: inline-block;
   font-weight: 600;
 }
@@ -17932,6 +17931,22 @@ input[data-error]:hover{
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.slidebar__icon{
+  fill : #4a5568;
+}
+
+.slidebar__link:hover  .slidebar__icon{
+  fill : #4299e1;
+}
+
+.slidebar__link--active  .slidebar__icon{
+  fill : white;
+}
+
+.slidebar__link--active:hover  .slidebar__icon{
+  fill : white;
 }
 
 @-webkit-keyframes showPopup {

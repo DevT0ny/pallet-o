@@ -27,21 +27,21 @@ export default function Header() {
     return (
         <header className="w-full h-16 bg-white fixed z-10">
           <div id="popup" className="absolute w-1/12 h-8  top-0 z-30  font-bold bg-blue-700 -500 rounded mt-1 text-center text-white" style={{marginLeft:39+'%'}} ></div>
-            <form onSubmit={onSubmit} className="h-full w-full py-2 px-6 bg-gray-500/  items-center flex flex-row" autoComplete="off">
-                <input
-                  type="color"
-                  className="w-12 h-10 border-0 rounded outline-none focus:border-blue-400 border-2 border-white origin-top hover:border-gray-400"
-                  onChange={handleChange}
-                  value={color}
-                  />
-                <input
-                  type="text" name="color"
-                  className="w-24 h-8 mx-4 text-center bg-gray-300 focus:shadow-outline outline-none rounded hover:border-gray-400 border-2"
-                  onChange={handleChange}
-                  value={color}
+          <form onSubmit={onSubmit} className="h-full w-full py-2 px-6 bg-gray-500/  items-center flex flex-row" autoComplete="off">
+              <input
+                type="color"
+                className=" w-1/6 lg:w-16  h-10 border-0 rounded outline-none focus:border-blue-400 border-2 border-white origin-top hover:border-gray-400"
+                onChange={handleChange}
+                value={color}
                 />
-                <input type="submit" className="w-16 h-8 bg-blue-500 hover:bg-blue-400 rounded text-white font-semibold focus:shadow-outline outline-none " value="Add"/>
-            </form>
+              <input
+                type="text" name="color"
+                className=" w-8/12 lg:w-32 h-8 mx-4 text-center bg-gray-300 focus:shadow-outline outline-none rounded hover:border-gray-400 border-2"
+                onChange={handleChange}
+                value={color}
+              />
+              <input type="submit" className="w-16 h-8 bg-blue-500 hover:bg-blue-400 rounded text-white font-semibold focus:shadow-outline outline-none " value="Add"/>
+          </form>
         </header>
     )
 }

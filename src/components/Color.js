@@ -23,7 +23,7 @@ export default function Color({color,id,remove,copyClassName}) {
     }
     return (
         <div
-            className="w-full h-20 rounded-md shadow-lg  border-2 border-gray-400 overflow-hidden relative hover:border-blue-600 hover:shadow-xl transition-shadow duration-200"
+            className="w-full h-20 rounded-md shadow-lg border-box border-2 border-gray-400 overflow-hidden relative hover:border-blue-600 hover:shadow-xl transition-shadow duration-200"
             style={{transition:"border .2s ease-in"}}
         >
             <div className="w-full h-full absolute top-0 left-0" style={{backgroundColor:color}}>

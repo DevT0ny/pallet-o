@@ -25,7 +25,7 @@ input[data-error]:hover{
   @apply text-2xl text-blue-500 font-bold  text-center py-4;
 }
 .slidebar__link{
-  @apply text-gray-700 w-full py-2 px-10 inline-block font-semibold;
+  @apply text-gray-700 w-full py-3 pl-6 inline-block font-semibold;
 }
 
 .slidebar__link:hover{
@@ -36,6 +36,18 @@ input[data-error]:hover{
 }
 .slidebar__link--active:hover{
   @apply text-white;
+}
+.slidebar__icon{
+  fill : #4a5568;
+}
+.slidebar__link:hover  .slidebar__icon{
+  fill : #4299e1;
+}
+.slidebar__link--active  .slidebar__icon{
+  fill : white;
+}
+.slidebar__link--active:hover  .slidebar__icon{
+  fill : white;
 }
 @keyframes showPopup {
   from{

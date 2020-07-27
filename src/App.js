@@ -11,17 +11,20 @@ function App() {
   return (
     < >
       <SlideBar />
-      <div className="ml-48 h-screen bg-gray-300">
+      <div className=" bg-gray-300 -500 h-full lg:ml-48 ">
         <ClipboardContextProvider>
           <Header/>
-          <Switch>
-            <Route  exact path="/">
-              <Clipboard />
-            </Route>
-            <Route  path="/pallets">
-              <Pallets/>
-            </Route>
-          </Switch>
+          <div className="bg-gray-300 pt-16	p-4">
+            <Switch>
+              <Route  exact path="/">
+                <Clipboard />
+              </Route>
+              <Route  path="/pallets">
+                <Pallets/>
+              </Route>
+            </Switch>
+          </div>
+
         </ClipboardContextProvider>
       </div>
 
