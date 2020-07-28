@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+./src/contexts/HeaderContext.js
+./src/contexts/ClipboardContext.js
+
+./src/components/Test.js
