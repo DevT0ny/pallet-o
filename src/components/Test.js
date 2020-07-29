@@ -32,7 +32,7 @@ export default function Test() {
 
 
   const degs=[0,45,90,90+45,180,180+45,270,270+45,360]
-  var turnshades = [];
+  // var turnshades = [];
   degs.map((deg)=>tinycolor(color).spin(deg).toString() )
   var flat = [].concat(...shadesList);
   console.log(flat);

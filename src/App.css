@@ -4,3 +4,17 @@ i.icon{
 i.icon:active{
     background-color: #4d4d4d;
 }
+@keyframes wave {
+  from {
+    clip-path: circle(60px at 50% 50%);
+  }
+  to {
+    clip-path: circle(100% at 50% 50%);
+
+  }
+}
+#Alert{
+  animation-duration: .6s;
+  transform: translateY(-100vh);
+
+}

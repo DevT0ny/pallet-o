@@ -1,4 +1,4 @@
-import React,{useContext,useState} from 'react'
+import React,{useState} from 'react'
 
 export default function Header({addColor}) {
     const [color, setColor] = useState('')
@@ -12,7 +12,7 @@ export default function Header({addColor}) {
         }
          addColor(color);
         setColor('')
-        console.log(color);
+        // console.log(color);
     }
 
     const handleChange = (e) =>{

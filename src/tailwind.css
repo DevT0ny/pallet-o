@@ -61,6 +61,6 @@ input[data-error]:hover{
 #popup{
   /* transition: transform 5s; */
   animation-duration: .6s;
-  transform: translateY(-6vh);
+  transform: translateY(-50vh);
 
 }
