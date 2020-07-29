@@ -17973,7 +17973,7 @@ input[data-error]:hover{
   /* transition: transform 5s; */
   -webkit-animation-duration: .6s;
           animation-duration: .6s;
-  transform: translateY(-6vh);
+  transform: translateY(-50vh);
 }
 
 @media (min-width: 640px) {
