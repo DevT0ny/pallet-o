@@ -22,9 +22,32 @@ export default function Shades() {
   // eslint-disable-next-line
   var Clipboard = new clipboard("."+copyClassName);
 
+  const checkRegex = /^#?\w{6}$/
+
+  const handleSubmit = (e,color)=>{
+      // e.preventDefault()
+      if (color.match(checkRegex)==null) {
+        e.target.children[1].setAttribute("data-error","data-error")
+        return false
+      }
+       setColor(color);
+      // console.log(color);
+  }
+
+  const handleChange = (e) =>{
+    let color = e.target.value
+    if (!color.match(checkRegex))
+        e.target.setAttribute("data-error","data-error")
+    else
+        e.target.removeAttribute("data-error")
+    if (color.length > 1 && color[0]!=='#') color = '#' + color
+    if (color.length >2 && color[1]==="#") color = color.substr(1)
+    return color
+  }
+
   return (
     <>
-      <Header addColor={setColor}/>
+    <Header checkRegex={checkRegex} addColor={setColor} handleChange={handleChange} handleSubmit={handleSubmit} />
 
       <div onLoad={()=> setMessage("Copied")} className="px-4 w-full --bg-indigo-700 gap-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" >
 

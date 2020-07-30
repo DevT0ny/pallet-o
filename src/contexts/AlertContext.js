@@ -14,7 +14,8 @@ const AlertContextProvider = (props) => {
     // console.log("yess");
     setTimeout(()=>document.getElementById('Alert').style.animationName="",1100)
     setTimeout(()=>showPopup(false),1300)
-  },[show])
+  },[show,message])
+
 
   return (
     <AlertContext.Provider value={{setMessage, showPopup}}>

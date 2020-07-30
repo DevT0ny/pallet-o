@@ -1,29 +1,34 @@
 import React,{useState} from 'react'
 
-export default function Header({addColor}) {
+export default function Header({addColor,checkRegex,handleSubmit,handleChange}) {
     const [color, setColor] = useState('')
-    const checkRegex = /^#?\w{6}$/
+    // const checkRegex = /^#?\w{6}$/
+    //
+    const onSubmit = (e)=>{
+      e.preventDefault()
 
-    var onSubmit = (e)=>{
-        e.preventDefault()
-        if (color.match(checkRegex)==null) {
-          e.target.children[1].setAttribute("data-error","data-error")
-          return false
-        }
-         addColor(color);
-        setColor('')
+      return handleSubmit(e,color)
+        // e.preventDefault()
+        // if (color.match(checkRegex)==null) {
+        //   e.target.children[1].setAttribute("data-error","data-error")
+        //   return false
+        // }
+        //  addColor(color);
+        // setColor('')
         // console.log(color);
     }
 
-    const handleChange = (e) =>{
-      let color = e.target.value
-      if (!color.match(checkRegex))
-          e.target.setAttribute("data-error","data-error")
-      else
-          e.target.removeAttribute("data-error")
-      if (color.length > 1 && color[0]!=='#') color = '#' + color
-      if (color.length >2 && color[1]==="#") color = color.substr(1)
-      setColor( color)
+    const onChange = (e) =>{
+      console.log("cba");
+      // return handleChange(e)
+      // let color = e.target.value
+      // if (!color.match(checkRegex))
+      //     e.target.setAttribute("data-error","data-error")
+      // else
+      //     e.target.removeAttribute("data-error")
+      // if (color.length > 1 && color[0]!=='#') color = '#' + color
+      // if (color.length >2 && color[1]==="#") color = color.substr(1)
+      setColor( handleChange(e))
     }
 
 
@@ -33,13 +38,13 @@ export default function Header({addColor}) {
               <input
                 type="color"
                 className=" w-1/6 lg:w-16  h-10 border-0 rounded outline-none focus:border-blue-400 border-2 border-white origin-top hover:border-gray-400"
-                onChange={handleChange}
+                onChange={onChange}
                 value={color}
                 />
               <input
                 type="text" name="color"
                 className=" w-8/12 lg:w-32 h-8 mx-4 text-center bg-gray-300 focus:shadow-outline outline-none rounded hover:border-gray-400 border-2"
-                onChange={handleChange}
+                onChange={onChange}
                 value={color}
               />
               <input type="submit" className="w-16 h-8 bg-blue-500 hover:bg-blue-400 rounded text-white font-semibold focus:shadow-outline outline-none " value="Add"/>

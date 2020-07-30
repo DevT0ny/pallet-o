@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename="/palleto/">
+    <Router basename="/pallet-o">
       <App />
     </Router>
   </React.StrictMode>,

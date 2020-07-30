@@ -1,6 +1,6 @@
 {
-  "homepage": "http://ajith-stark.github.io/palleto",
-  "name": "palleto",
+  "homepage": "http://ajith-stark.github.io/pallet-o",
+  "name": "pallet-o",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "npx tailwindcss build src/tailwind.css -o src/index.css",
-    "build-full ": "npm run build-css && npm run build",
+    "build-full": "npm run build-css && npm run build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
