@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react'
+import React, { useState,useContext,useEffect } from 'react'
 import tinycolor from 'tinycolor2'
 import clipboard from 'clipboard'
 
@@ -8,8 +8,12 @@ import {AlertContext} from '../contexts/AlertContext'
 
 export default function Shades() {
 
-  const [color, setColor] = useState('#4299e1')
+  let localShade =  JSON.parse(localStorage.getItem("localShade"))
+  const [color, setColor] = useState(localShade ? localShade : '')
   const { setMessage, showPopup } = useContext(AlertContext)
+  useEffect(()=>{
+    localStorage.setItem("localShade",JSON.stringify(color))
+  },[color])
 
   var brightenList = [], darkenList=[], step =8;
   for (let i=100; i>=0 ;i-=step) brightenList.push( tinycolor(color).brighten(i).toString() )
